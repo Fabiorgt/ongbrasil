@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instituto Bio Brasil</title>
+  <link rel="stylesheet" href="index.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo-area">
+        <img src="logo.jpg" alt="Logo da ONG" class="logo" />
+        <span>Instituto Bio Brasil</span>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Sobre Nós</a></li>
+        <li><a href="doacoes.html">Doações</a></li>
+        <li><a href="depoimento.html">Depoimentos</a></li>
+        <li><a href="cadastro.html">Cadastro do protetor</a></li>
+        <li><a href="parceiros.html">Parceiros</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="carrossel">
+    <div class="slides">
+      <div class="slide ativo">
+        <img src="capa1.png" alt="Imagem 1" />
+      </div>
+      <div class="slide">
+        <img src="capa2.png" alt="Imagem 2" />
+      </div>
+      <div class="slide">
+        <img src="capa3.png" alt="Imagem 3" />
+      </div>
+    </div>
+    <button class="anterior">&#10094;</button>
+    <button class="proximo">&#10095;</button>
+    <div class="hero-text">
+      <!-- Pode adicionar texto ou slogan aqui -->
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="historia" class="fade-in">
+      <h1>Bem-vindo ao Instituto Bio Brasil.</h1>
+      <p>Unindo amor pelos animais e consciência ambiental.</p>
+      <h2>Nossa História</h2>
+      <h3>Muito prazer! Eu me chamo Marcia Brandão e irei contar um pouco sobre a história por trás da criação da nossa ONG.</h3>
+      <p>Antes de criar o Instituto Bio Brasil, eu já ajudava no resgate de animais. Porém, nunca abrigamos esses animais resgatados, pois não havia um local para isso, mas sempre me envolvia em campanhas de adoção e sempre tive essa vontade de criar uma ONG.</p>
+      <p>Um tempo depois, fui nomeada como vice-presidente de uma ONG no qual já estava atuando, porém essa ONG não era voltada para a causa dos animais e sim para esportes. Sempre gostei do que fazia, mas não era o que eu realmente queria. Foi aí que resolvi fundar o Instituto.</p>
+      <p>O Instituto Bio Brasil foi fundado tanto para a causa animal quanto para a causa ambiental. O ambiental no sentido de conscientizar as pessoas a reciclar e o animal, pois nós temos hoje pessoas que não adotam animais porque não têm dinheiro para cuidar deles, já que o tratamento é caro.</p>
+      <p>Apesar dos hospitais públicos que já foram inaugurados, ainda é muito pouco para a demanda de animais abandonados. A ONG foi criada para ajudar justamente essas pessoas. Hoje temos um valor de consulta, um valor para uma cirurgia ortopédica, que geralmente custa R$ 5.000,00, e aqui é cobrado R$ 1.000,00, pois não temos interesse em lucro.</p>
+      <p>Pagamos a medicação, o profissional que realiza o trabalho e o que sobra é custo da ONG, que é revertido na reposição de material.</p>
+      <p>Hoje nós oferecemos consultas, exames de hemograma e cirurgias.</p>
+      <p>E o que queremos? Queremos alcançar o Raio-X, o Ultrassom e baratear os atendimentos. Prezamos pelo profissionalismo, pois acreditamos que não adianta ter serviço de baixo custo com péssima qualidade.</p>
+    </section>
+
+    <section id="servicos" class="fade-in">
+      <h2 class="titulo-servicos">O que oferecemos</h2>
+      <ul class="servicos-lista">
+        <li><h3>Consultas veterinárias acessíveis</h3></li>
+        <li><h3>Cirurgias com preços reduzidos</h3></li>
+        <li><h3>Exames de hemograma</h3></li>
+        <li><h3>Campanhas de adoção e reciclagem</h3></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://www.instagram.com/institutobiobrasil?igsh=MW91aDc5bmozamc2Ng==" target="_blank">
+        <img src="instagram.png" alt="Instagram" width="44" />
+      </a>
+      <a href="https://www.facebook.com/share/1AMzYWnWj9/" target="_blank">
+        <img src="face.png" alt="Facebook" width="43" />
+      </a>
+      <a href="https://l.instagram.com/?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D5511910555533" target="_blank">
+        <img src="zap.png" alt="Whatsapp" width="42" />
+      </a>
+    </div>
+    <p>&copy; 2025 Instituto Bio Brasil. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Banner de Cookies -->
+  <div class="cookie-modal" id="cookie-banner">
+    <div class="cookie-box">
+      <p>Usamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="#">Política de Privacidade</a>.</p>
+      <button onclick="aceitarCookies()">Aceitar</button>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const anterior = document.querySelector('.anterior');
+    const proximo = document.querySelector('.proximo');
+    let index = 0;
+
+    function mostrarSlide(n) {
+      slides.forEach(slide => slide.classList.remove('ativo'));
+      slides[n].classList.add('ativo');
+    }
+
+    anterior.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      mostrarSlide(index);
+    });
+
+    proximo.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      mostrarSlide(index);
+    });
+
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      mostrarSlide(index);
+    }, 6000); // troca automática a cada 6 segundos
+
+    function aceitarCookies() {
+      localStorage.setItem('cookiesAceitos', 'true');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    window.addEventListener('load', () => {
+      if (!localStorage.getItem('cookiesAceitos')) {
+        document.getElementById('cookie-banner').style.display = 'flex';
+      }
+    });
+  </script>
+
+</body>
+</html>

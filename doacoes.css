@@ -1,0 +1,389 @@
+/* DOAÇÕES CSS */
+
+:root {
+  --verde: #0e5d09;
+  --amarelo: #fdd835;
+  --azul: #0e5d09;
+  --branco: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url(arara.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+.cabecalho {
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 15px;
+  flex-wrap: wrap;
+}
+
+.cabecalho img {
+ 
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  border: 3px solid #fff59d;
+  /* borda amarelo claro */
+  object-fit: cover;
+  background-color: white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.cabecalho img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 245, 157, 0.6);
+}
+
+.list a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--azul);
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 30px;
+  /* tamanho aumentado */
+}
+
+
+.list a:hover {
+  color: var(--verde);
+}
+
+.fundo {
+  background-color: rgba(255, 255, 255, 0.85);
+  margin: 20px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  color: var(--verde);
+}
+
+p {
+  line-height: 1.6;
+}
+
+.formulario-doacao {
+  background-color: #f0f8f0;
+  border: 2px solid var(--verde);
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 5px 15px rgba(0, 100, 0, 0.1);
+}
+
+.formulario-doacao h2 {
+  text-align: center;
+  color: var(--azul);
+  margin-bottom: 20px;
+}
+
+.formulario-doacao form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-doacao input,
+.formulario-doacao select,
+.formulario-doacao textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.formulario-doacao button {
+  background-color: var(--verde);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.formulario-doacao button:hover {
+  background-color: var(--azul);
+}
+
+/* Imagens redondas flutuantes */
+.floating-img {
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.85;
+  z-index: 1;
+}
+
+.floating1 {
+  top: 65%;
+  left: 5%;
+}
+
+.floating2 {
+  top: 60%;
+  right: 5%;
+  width: 470px;
+  height: 470px;
+}
+
+
+.floating3 {
+  bottom: 15%;
+  left: 19%;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Rodapé moderno */
+footer.main {
+  background-color: rgba(39, 136, 19, 0.692);
+  color: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  margin: 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-footer img {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  border: 3px solid #fff59d;
+  /* borda amarelo claro */
+  object-fit: cover;
+  background-color: white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo-footer img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 245, 157, 0.6);
+}
+
+.contact-footer {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.contact-footer p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.contact-footer strong {
+  color: var(--amarelo);
+  /* destaca a palavra "Email" */
+}
+
+.social {
+  margin-top: 10px;
+}
+
+.social a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social img {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.social a:hover img {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.copi {
+  text-align: cente;
+  margin-top: 135px;
+  font-size: 14px;
+}
+
+.map-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.8);
+  /* branco com transparência */
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .list a {
+    display: block;
+    margin: 10px 0;
+    font-size: 24px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .floating-img {
+    display: none;
+    /* esconde imagens flutuantes em telas pequenas */
+  }
+
+  .formulario-doacao {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .map-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+
+  .logo-footer img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .inspire-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #e8f5e9, #fffde7);
+    padding: 50px 20px;
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .inspire-text {
+    flex: 1 1 400px;
+    padding: 20px;
+  }
+
+  .inspire-text h2 {
+    color: var(--verde);
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .inspire-text p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .inspire-image {
+    flex: 1 1 300px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .inspire-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .inspire-section {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .inspire-text h2 {
+      font-size: 24px;
+    }
+
+    .inspire-text p {
+      font-size: 16px;
+    }
+  }
+
+  .p5 {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .p5 h1 {
+    font-size: 2em;
+    color: #227a2b;
+    margin-bottom: 20px;
+  }
+
+  .frase-impacto p {
+    font-size: 3.8rem;
+    /* Aumente esse valor se quiser ainda maior */
+    font-weight: 600;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .info-doacoes {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.5;
+  }
+
+}
+
+/* DOAÇÕES CSS */

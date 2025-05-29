@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="depoimento.css" />
+  <meta name="description" content="Conheça histórias inspiradoras de adoção e resgate da ONG de Animais." />
+  <title>Depoimentos - ONG de Animais</title>
+</head>
+
+<body>
+  <div class="pegadas">
+    <img src="pegada.png" alt="Pegada de Animal" />
+  </div>
+
+  <header class="hero">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="bio1.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos HTML5.
+    </video>
+
+    <div class="header-content">
+      <img src="logo.jpg" alt="Logo da ONG" class="logo" />
+
+      <nav class="list">
+        <a href="index.html">Sobre nós</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="depoimento.html">Depoimentos</a>
+        <a href="cadastro.html">Cadastro do protetor</a>
+        <a href="parceiros.html">Parceiros</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="title">
+    Aqui estão algumas histórias de amor, compaixão e dedicação de protetores e doadores que fazem a
+    diferença na vida dos animais. Suas ações inspiram e mostram que, juntos, podemos criar um mundo melhor para todos
+    os seres vivos.
+  </div>
+
+  <main class="container">
+    <div class="depoimento fade-in delay-1">
+      <div>
+        <p>"Jade, é uma gatinha cheia de determinação, ela vivia em um ferro velho, rodeada por dificuldades,
+          mas sempre com o espírito forte e lutadora.
+          E em pouco tempo, ela foi adotada por uma família maravilhosa, que a recebeu de braços abertos,
+          disposta a dar a ela uma vida cheia de felicidade e aconchego."</p>
+      </div>
+      <img src="img1.jpg" alt="Foto de Ana Souza" />
+    </div>
+
+    <div class="depoimento fade-in delay-2">
+      <div>
+        <p>"Este pequenino já encontrou seu lar doce lar! Que essa nova jornada seja cheia de amor e alegria!"</p>
+      </div>
+      <img src="img3.jpg" alt="Foto do gatinho" />
+    </div>
+
+    <div class="depoimento fade-in delay-3">
+      <div>
+        <p>"Encontramos o lar perfeito para este pequeno! Que alegria poder ver esse gatinho cheio de amor e carinho."
+        </p>
+      </div>
+      <img src="img2.jpg" alt="Foto de Mariana Costa" />
+    </div>
+
+    <div class="depoimento fade-in delay-4">
+      <div>
+        <p>
+          Nega é uma cachorrinha idosa que foi abandonada no cemitério doente.
+          Através de campanhas realizadas pelo Instituto Bio Brasil, Nega realizou a cirurgia de remoção do tumor e teve
+          uma nova chance.
+          GANHOU UM NOVO LAR !!!!
+
+          Nosso projeto se fortalece mais com a sua doação de tampinhas e lacres.
+        </p>
+      </div>
+
+      <div class="galeria">
+        <div class="imagem-principal">
+          <img src="nega.png" alt="Nega imagem principal" />
+        </div>
+
+        <div class="galeria-miniaturas">
+          <img src="nega1.png" onclick="expandirImagem(this)" alt="Foto 1">
+          <img src="nega2.jpg" onclick="expandirImagem(this)" alt="Foto 2">
+          <img src="nega3.jpg" onclick="expandirImagem(this)" alt="Foto 3">
+          <!-- Adicione mais miniaturas conforme necessário -->
+        </div>
+
+        <!-- Lightbox para imagem expandida -->
+        <div id="lightbox" onclick="fecharLightbox()">
+          <img id="imagem-expandida" src="" alt="Imagem expandida">
+        </div>
+
+        <script>
+          function expandirImagem(img) {
+            const lightbox = document.getElementById('lightbox');
+            const imgExpandida = document.getElementById('imagem-expandida');
+            imgExpandida.src = img.src;
+            lightbox.style.display = 'flex';
+          }
+
+          function fecharLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+          }
+        </script>
+
+
+    <div class="depoimento fade-in delay-5">
+      <div>
+        <p>"Não posso esquecer de agradecer o Instituto Bio Brasil que ajudou levando cercado para que fosse possível os
+          animais participarem da feira no sábado.
+          Deus abençoe a corrente do bem em prol deles!🥰❤"</p>
+      </div>
+      <img src="cerca.jpg" alt="Depoimento 5" />
+    </div>
+
+        <div class="depoimento fade-in delay-6" style="display: flex; align-items: center; gap: 20px;">
+          <div>
+            <p>"De abandonado a amado: a incrível jornada do Alfredo!
+
+              Quando o encontramos em dezembro, próximo ao Rodoanel, Alfredo estava debilitado, machucado e sem esperança. Mas graças ao amor e dedicação de nossa equipe, ele começou a se recuperar.
+
+              Hoje, podemos dizer que Alfredo está curado da anemia, seu olho está totalmente recuperado e ele concluiu o primeiro ciclo de medicação para sarna. E, como parte de sua jornada para uma vida saudável, ele foi castrado recentemente.
+
+               Queremos agradecer a todos que contribuíram com doações para ajudar na sua recuperação. Sua gratidão e amor fizeram toda a diferença na vida desse anjinho.🐾❤"
+</p>
+          </div>
+          <!-- IMAGEM REDONDA -->
+          <img src="cachorro.jpg" alt="Depoimento 6" style="width: 400px; height: 400px; object-fit: cover; border-radius: 50%;" />
+
+          <!-- VÍDEO VERTICAL (NÃO REDONDO) -->
+          <video autoplay muted loop playsinline style="max-height: 400px;">
+            <source src="cachorro.mp4" type="video/mp4" />
+            
+          </video>
+        </div>
+
+    <a href="index.html" class="btn">Voltar</a>
+  </main>
+
+  <footer>
+    <img src="dogp.png" alt="Cachorro" class="cachorro-fundo" />
+    <p>&copy; 2025 ONG de Animais. Todos os direitos reservados.</p>
+  </footer>
+</body>
+
+</html>

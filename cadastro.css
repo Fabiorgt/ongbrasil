@@ -1,0 +1,181 @@
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+  }
+
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.list a:hover {
+  color: #c8e6c9;
+  text-shadow: 0 0 5px white;
+}
+
+  header {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+
+.logo {
+  width: 180px; /* aumente o tamanho */
+  height: 180px;
+  border-radius: 50%; /* formato redondo */
+  margin-top: -40px; /* sobe a imagem */
+  
+  margin-right: 20px; /* espaço da borda direita */
+  display: block;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover {
+  box-shadow: 0 0 20px 5px rgb(58, 236, 9, 0.7);
+  transform: scale(1.05);
+}
+
+  .titulo {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+  }
+
+  section {
+    max-width: 700px;
+    margin: -185px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+  }
+
+  form div {
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+  }
+
+  input[type="submit"], input[type="reset"] {
+    width: auto;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: background 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background: #1565c0; /* azul no hover */
+  }
+
+  input[type="reset"]:hover {
+    background: #1565c0; /* azul no hover */
+  }
+.copi {
+  width: 100%; /* ocupa 100% da largura da viewport */
+  background-color: #2e7d32;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 1rem;
+  margin: 0;
+  position: relative;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 120px;
+    height: 120px;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .titulo {
+    font-size: 1.4rem;
+    margin-top: 20px;
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  section {
+    margin: 20px auto;
+    padding: 15px;
+    width: 90%;
+  }
+
+  input, textarea {
+    font-size: 1rem;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .copi {
+    font-size: 0.9rem;
+    padding: 1rem 0;
+    text-align: center;
+  }
+}
+/* Logo visível por padrão */
+.logo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito hover */
+.logo:hover {
+  box-shadow: 0 0 20px 5px rgba(58, 236, 9, 0.7);
+  transform: scale(1.05);
+}
+
+/* Oculta a logo em telas menores que 768px */
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+}
